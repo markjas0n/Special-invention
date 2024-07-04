@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header, footer {
+    text-align: center;
+    padding: 1rem;
+}
+
+main {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+form div {
+    margin-bottom: 1rem;
+}
+
+form div label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+form div input, form div textarea {
+    width: 100%;
+    padding: 0.5rem;
+}
+
+#modeToggle {
+    margin-left: 1rem;
+}
+
+.light-mode {
+    background-color: white;
+    color: black;
+}
+
+.dark-mode {
+    background-color: black;
+    color: white;
+}

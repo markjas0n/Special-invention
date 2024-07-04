@@ -12,10 +12,15 @@ document.addEventListener('DOMContentLoaded', () => {
             const content = document.getElementById('content').value.trim();
 
             if (username && title && content) {
+                // Retrieving existing block posts from localStorage
                 const blogPosts = JSON.parse(localStorage.getItem('blogPosts')) || [];
+                // new blog post object
                 const newPost = { username, title, content };
+                // new blog post to the list
                 blogPosts.push(newPost);
+                // Save updated blog posts list back to localStorage
                 localStorage.setItem('blogPosts', JSON.stringify(blogPosts));
+                // Redirect to posts.html
                 window.location.href = 'posts.html';
             } else {
                 errorMessage.style.display = 'block';
@@ -23,27 +28,4 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Rendering blog posts on posts.html
-    const postsContainer = document.getElementById('postsContainer');
-    if (postsContainer) {
-        const blogPosts = JSON.parse(localStorage.getItem('blogPosts')) || [];
-        blogPosts.forEach(post => {
-            const postElement = document.createElement('div');
-            postElement.className = 'post';
-            postElement.innerHTML = `
-                <h2>${post.title}</h2>
-                <p>${post.content}</p>
-                <p><em>by ${post.username}</em></p>
-            `;``
-            postsContainer.appendChild(postElement);
-        });
-    }
-
-    // Implementing light/dark mode toggle
-    const modeToggle = document.getElementById('modeToggle');
-    if (modeToggle) {
-        modeToggle.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
-        });
-    }
 });

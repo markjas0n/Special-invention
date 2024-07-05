@@ -11,9 +11,23 @@ header, footer {
 main {
     max-width: 600px;
     margin: 0 auto;
-    padding: 1rem;
+    padding: 0 px;
+}
+.form-container {
+    display:flex;
+    align-items: flex-start;
+    padding: center-right; 
 }
 
+.form-image {
+    max-width: 600px;
+    margin-right: 1rem;
+    padding-right: 150px;
+}
+form {
+    padding: 20px, 20px, 20px, 20px;
+    flex-grow: 1;
+}
 form div {
     margin-bottom: 1rem;
 }
@@ -24,7 +38,7 @@ form div label {
 }
 
 form div input, form div textarea {
-    width: 100%;
+    width: 200%;
     padding: 0.5rem;
 }
 

@@ -21,11 +21,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Save updated blog posts list back to localStorage
                 localStorage.setItem('blogPosts', JSON.stringify(blogPosts));
                 // Redirect to posts.html
-                window.location.href = 'posts.html';
+                window.location.href = 'blog.html';
             } else {
                 errorMessage.style.display = 'block';
             }
         });
     }
+    
+
 
 });

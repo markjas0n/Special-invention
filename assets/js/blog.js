@@ -1,5 +1,6 @@
 
-  //Posts Display
+ 
+ //Posts Display
   document.addEventListener('DOMContentLoaded', () => {
     const blogPostsContainer = document.getElementById('blogPosts');
 
@@ -22,3 +23,5 @@
     // Display all blog posts
     blogPosts.forEach(displayBlogPost);
 });
+
+
